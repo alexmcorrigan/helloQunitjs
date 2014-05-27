@@ -1,0 +1,1 @@
+1. Install dependencies `bower install`

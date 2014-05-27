@@ -1,0 +1,10 @@
+{
+    "name" : "helloQunitjs",
+    "main" : "server.js",
+
+    "dependencies" : {
+    },
+    "devDependencies" : {
+        "qunit" : "latest"
+    }
+}

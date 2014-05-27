@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Mangled Date Examples</title>
+    <script src="prettyDate.js"></script>
+    <script>
+        window.onload = function () {
+            var now = new Date;
+            var links = document.getElementsByTagName("a");
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].title) {
+                    var date = prettyDate.update(now);
+                    if (date)
+                        links[i].innerHTML = date;
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <ul>
+        <li class="entry">
+            <p>Post 1 day</p>
+            <small class="extra">
+                on <span class="time"><a href="/2008/01/1/57/" title="2014-05-22T20:24:17Z"></a></span>
+            </small>
+        </li>
+        <li class="entry">
+            <p>Post 7 days</p>
+            <small class="extra">
+                on <span class="time"><a href="/2008/01/2/57/" title="2014-05-15T20:24:17Z"></a></span>
+            </small>
+        </li>
+        <li class="entry">
+            <p>Post > 31 days</p>
+            <small class="extra">
+                on <span class="time"><a href="/2008/01/1/57/" title="2008-01-28T20:24:17Z"></a></span>
+            </small>
+        </li>
+    </ul>
+</body>
+</html>
